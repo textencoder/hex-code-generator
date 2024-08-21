@@ -1,4 +1,25 @@
 const bodyColor = document.querySelector('body');
+const hexContainer = document.getElementById('hex-container');
+const paletteContainer = document.getElementById('palette-container');
+
+const hexMode = document.getElementById('hex-mode');
+const paletteMode = document.getElementById('palette-mode');
+
+paletteMode.addEventListener("click", () => {
+    hexContainer.style.display = "none"
+    paletteContainer.style.display = "flex";
+    hexMode.style.textDecoration = "none";
+    paletteMode.style.textDecoration = "underline";
+})
+
+hexMode.addEventListener("click", () => {
+    paletteContainer.style.display = "none"
+    hexContainer.style.display = "flex";
+    hexMode.style.textDecoration = "underline";
+    paletteMode.style.textDecoration = "none";
+})
+
+hexMode.style.textDecoration = "underline";
 
 const characters = 'ABCDEF0123456789';
 
@@ -13,8 +34,8 @@ const returnHexCode = () => {
     hexArray.push(randomHexCharacter());
     }
     const finalHex = hexArray.join('');
-    //bodyColor.style.backgroundColor = finalHex;
-    //bodyColor.innerText = finalHex;
+    hexContainer.style.backgroundColor = finalHex;
+    hexContainer.innerText = finalHex;
     return finalHex;
 }   
 
@@ -23,12 +44,12 @@ const returnPalette = () => {
     for (let i = 0; i < 5; i++) {
         paletteArray.push(returnHexCode());
     }
-    //console.log(paletteArray);
+    console.log(paletteArray);
     //return paletteArray;
-    bodyColor.innerHTML = ``;
+    paletteContainer.innerHTML = ``;
     paletteArray.forEach(hex => {
         //console.log(hex);
-        bodyColor.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`
+        paletteContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`
     })
 }
 
@@ -38,4 +59,3 @@ window.addEventListener("load", returnPalette, false);
 window.addEventListener('click', returnPalette)
 
 // add copy to clipboard feature
-// color mode / pallette mode
