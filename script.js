@@ -29,26 +29,22 @@ const randomHexCharacter = () => {
 }
 
 const returnHexCode = () => {
-    const hexArray = ['#'];
+    let hexString = '#';
     for (let i = 0; i < 6; i++) {
-    hexArray.push(randomHexCharacter());
+    hexString += randomHexCharacter();
     }
-    const finalHex = hexArray.join('');
-    hexContainer.style.backgroundColor = finalHex;
-    hexContainer.innerText = finalHex;
-    return finalHex;
+    hexContainer.style.backgroundColor = hexString;
+    hexContainer.innerText = hexString;
+    return hexString;
 }   
 
 const returnPalette = () => {
-    const paletteArray = [];
+    let paletteArray = [];
     for (let i = 0; i < 5; i++) {
         paletteArray.push(returnHexCode());
     }
-    console.log(paletteArray);
-    //return paletteArray;
     paletteContainer.innerHTML = ``;
     paletteArray.forEach(hex => {
-        //console.log(hex);
         paletteContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`
     })
 }
