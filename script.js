@@ -8,18 +8,18 @@ const paletteMode = document.getElementById('palette-mode');
 paletteMode.addEventListener("click", () => {
     hexContainer.style.display = "none"
     paletteContainer.style.display = "flex";
-    hexMode.style.textDecoration = "none";
-    paletteMode.style.textDecoration = "underline";
+    hexMode.style.background = "none";
+    paletteMode.style.background = "#0f0f0f";
 })
 
 hexMode.addEventListener("click", () => {
     paletteContainer.style.display = "none"
     hexContainer.style.display = "flex";
-    hexMode.style.textDecoration = "underline";
-    paletteMode.style.textDecoration = "none";
+    hexMode.style.background = "#0f0f0f";
+    paletteMode.style.background = "none";
 })
 
-hexMode.style.textDecoration = "underline";
+
 
 const characters = 'ABCDEF0123456789';
 
@@ -45,13 +45,13 @@ const returnPalette = () => {
     }
     paletteContainer.innerHTML = ``;
     paletteArray.forEach(hex => {
-        paletteContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`
+        paletteContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`;
     })
 }
 
 //window.addEventListener("load", returnHexCode, false);
 //window.addEventListener("click", returnHexCode);
 window.addEventListener("load", returnPalette, false);
-window.addEventListener('click', returnPalette)
+window.addEventListener('click', returnPalette);
 
 // add copy to clipboard feature

@@ -7,29 +7,37 @@
 }
 
 nav {
-    width: 100%;
-    height: 10%;
+    width: 350px;
+    height: 60px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     position:fixed;
-    bottom: 0;
+    right: 10px;
+    bottom: 10px;
+    background-color: #5f5f5f5f;
     color: white;
     font-size: 1rem;
+    border-radius: 175px;
 }
 
 nav button {
-    width: 120px;
+    width: 200px;
     height: 50px;
-    margin: 20px;
+    margin: 5px;
     background: none;
     border: none;
     font-size: 1.1rem;
     color: white;
+    border-radius: 100px;
 }
 
 nav button:hover {
-    color: black;
+    background: #0f0f0f;
+}
+
+nav button:first-of-type {
+    background: #0f0f0f;
 }
 
 #hex-container {
@@ -39,8 +47,7 @@ nav button:hover {
     justify-content: center;
     align-items: center;
     font-size: 4rem;
-    color: white;
-    
+    color: white;  
 } 
 
 #palette-container {
@@ -50,7 +57,6 @@ nav button:hover {
     justify-content: center;
     align-items: center;
     color: white;
-    background: #0f0f0f;
 } 
 
 .palette {
@@ -79,9 +85,10 @@ nav button:hover {
  
     nav {
         justify-content: space-between;
+        bottom: 10px;
     }
 
     nav button {
-        margin: 30px;
+        margin: 5px;
     }
 }
