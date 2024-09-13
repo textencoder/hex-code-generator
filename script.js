@@ -1,25 +1,29 @@
-const bodyColor = document.querySelector('body');
+const body = document.querySelector('body');
 const hexContainer = document.getElementById('hex-container');
 const paletteContainer = document.getElementById('palette-container');
 
 const hexMode = document.getElementById('hex-mode');
 const paletteMode = document.getElementById('palette-mode');
 
+const copyBtn = document.getElementById('copy');
+
 paletteMode.addEventListener("click", () => {
     hexContainer.style.display = "none"
     paletteContainer.style.display = "flex";
     hexMode.style.background = "none";
+    hexMode.style.color = "#969696";
     paletteMode.style.background = "#0f0f0f";
+    paletteMode.style.color = "white";
 })
 
 hexMode.addEventListener("click", () => {
     paletteContainer.style.display = "none"
     hexContainer.style.display = "flex";
     hexMode.style.background = "#0f0f0f";
+    hexMode.style.color = "white";
     paletteMode.style.background = "none";
+    paletteMode.style.color = "#969696";
 })
-
-
 
 const characters = 'ABCDEF0123456789';
 
@@ -50,8 +54,15 @@ const returnPalette = () => {
 }
 
 //window.addEventListener("load", returnHexCode, false);
-//window.addEventListener("click", returnHexCode);
+hexContainer.addEventListener("click", returnHexCode);
 window.addEventListener("load", returnPalette, false);
-window.addEventListener('click', returnPalette);
+paletteContainer.addEventListener('click', returnPalette);
 
-// add copy to clipboard feature
+//copy to clipboard
+copyBtn.addEventListener('click', () => {
+    if (hexContainer.style.display == 'none') {
+        navigator.clipboard.writeText(paletteContainer.innerText);
+    } else {
+        navigator.clipboard.writeText(hexContainer.innerText);
+    }
+})
