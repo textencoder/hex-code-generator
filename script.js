@@ -64,5 +64,5 @@ copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(paletteContainer.innerText);
     } else {
         navigator.clipboard.writeText(hexContainer.innerText);
-    }
+    }  
 })
