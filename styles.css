@@ -110,10 +110,9 @@ nav button:nth-of-type(2) {
     }
  
     nav {
-        justify-content: space-between;
-        bottom: 10px;
+        width: 80%;
         right: 0;
-        width: 100%;
+        margin: auto 35px;
     }
 
     nav button {
