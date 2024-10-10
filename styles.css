@@ -6,65 +6,47 @@
     cursor: default;
 }
 
-#copy {
+header {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
-    width: 80px;
-    height: 50px;
-    background-color: #5f5f5f5f;
-    border: none;
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
-}
-
-#copy:hover {
-    background-color: #0f0f0f;
-}
-
-#copy:active {
-    background-color: #5f5f5f;
+    top: 20px;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
-    width: 350px;
-    height: 60px;
+    width: 60%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    background-color: #5f5f5f5f;
-    color: white;
-    font-size: 1rem;
-    border-radius: 175px;
 }
 
-nav button {
-    width: 200px;
-    height: 50px;
-    margin: 5px;
-    background: none;
-    border: none;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 100px;
+img {
+    width: 60px;
     cursor: pointer;
 }
 
-nav button:first-of-type {
-    background: #0f0f0f;
+button {
+    background: none;
+    border: none;
 }
 
-nav button:nth-of-type(2) {
-    color: #969696;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 #hex-container {
+    z-index: -1;
+    position: absolute;
     height: 100vh;
     width: 100vw;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,6 +55,9 @@ nav button:nth-of-type(2) {
 } 
 
 #palette-container {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
     height: 100vh;
     width: 100vw;
     display: none;
@@ -87,6 +72,19 @@ nav button:nth-of-type(2) {
     font-size: 2rem;
     display: grid;
     place-items: center;
+}
+
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 100px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -108,14 +106,28 @@ nav button:nth-of-type(2) {
     #copy {
         top: 10px;
     }
- 
+    header {
+        justify-content: flex-end;
+        height: 100vh;
+        width: 20vw;
+        right: 20px;
+        top: 0;
+    }
     nav {
-        width: 80%;
-        right: 0;
-        margin: auto 35px;
+        width: 30%;
+        height: 60%;
+        flex-direction: column;
     }
 
-    nav button {
-        width: 50%;
+    footer {
+        width: 10vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+
+    footer img {
+        transform: rotate(90deg);
     }
 }
