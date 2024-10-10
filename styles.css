@@ -94,6 +94,10 @@ footer img {
 }
 
 @media screen and (max-width: 500px) {
+    #hex-container {
+        font-size: 2rem;
+    }
+
     #palette-container {
         flex-direction: column;
     }
@@ -109,7 +113,7 @@ footer img {
     header {
         justify-content: flex-end;
         height: 100vh;
-        width: 20vw;
+        width: 50vw;
         right: 20px;
         top: 0;
     }

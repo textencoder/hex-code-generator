@@ -6,14 +6,16 @@ const hexMode = document.getElementById('hex-mode');
 const paletteMode = document.getElementById('palette-mode');
 const copyBtn = document.getElementById('copy');
 
-paletteMode.addEventListener("click", () => {
-    hexContainer.style.display = "none"
-    paletteContainer.style.display = "flex";
-})
-
 hexMode.addEventListener("click", () => {
     paletteContainer.style.display = "none"
     hexContainer.style.display = "flex";
+    returnHexCode();
+})
+
+paletteMode.addEventListener("click", () => {
+    hexContainer.style.display = "none"
+    paletteContainer.style.display = "flex";
+    returnPalette();
 })
 
 const characters = 'ABCDEF0123456789';
