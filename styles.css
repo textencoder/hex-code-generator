@@ -3,7 +3,6 @@
     padding: 0;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 700;
-    cursor: default;
 }
 
 header {
@@ -24,14 +23,16 @@ nav {
     align-items: center;
 }
 
-img {
+svg {
     width: 60px;
+    height: 60px;
     cursor: pointer;
 }
 
 button {
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 body {
@@ -52,6 +53,7 @@ body {
     align-items: center;
     font-size: 4rem;
     color: white;  
+    cursor: default;
 } 
 
 #palette-container {
@@ -94,6 +96,7 @@ footer img {
 }
 
 @media screen and (max-width: 500px) {
+    
     #hex-container {
         font-size: 2rem;
     }
@@ -110,15 +113,14 @@ footer img {
     #copy {
         top: 10px;
     }
-    header {
-        justify-content: flex-end;
+    header {  
         height: 100vh;
-        width: 50vw;
+        width: 15vw;
         right: 20px;
         top: 0;
     }
     nav {
-        width: 30%;
+        width: 100%;
         height: 60%;
         flex-direction: column;
     }
@@ -131,7 +133,8 @@ footer img {
         bottom: 0;
     }
 
-    footer img {
+    a {
         transform: rotate(90deg);
     }
+
 }

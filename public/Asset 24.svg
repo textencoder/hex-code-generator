@@ -1,1 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="b" xmlns="http://www.w3.org/2000/svg" width="292.72" height="338" viewBox="0 0 292.72 338"><g id="c"><polygon id="d" points="0 84.5 146.36 0 292.72 84.5 292.72 253.5 146.36 338 0 253.5 0 84.5"/><circle cx="146.36" cy="169" r="85.72" fill="#fff"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" xmlns="http://www.w3.org/2000/svg" width="292.72" height="338" viewBox="0 0 292.72 338">
+<g id="c">
+<polygon id="d" points="0 84.5 146.36 0 292.72 84.5 292.72 253.5 146.36 338 0 253.5 0 84.5"/>
+<circle cx="146.36" cy="169" r="85.72" fill="#fff"/>
+</g>
+</svg>
