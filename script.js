@@ -6,6 +6,8 @@ const hexMode = document.getElementById("hex-mode");
 const paletteMode = document.getElementById("palette-mode");
 const copyBtn = document.getElementById("copy");
 
+const copyNotification = document.getElementById("copy-notification");
+
 hexMode.addEventListener("click", () => {
   paletteContainer.style.display = "none";
   hexContainer.style.display = "flex";
@@ -58,4 +60,19 @@ copyBtn.addEventListener("click", () => {
   } else {
     navigator.clipboard.writeText(hexContainer.innerText);
   }
+
+  copyNotification.style.display = 'flex';
+
+  copyNotification.classList.add('visible');
+
+  // delay the fade-out to allow the element to appear first
+  setTimeout(() => {
+    copyNotification.classList.add('fade-out');
+
+    // remove visibility after the transition ends
+    copyNotification.addEventListener('transitionend', () => {
+      copyNotification.classList.remove('visible', 'fade-out');
+      copyNotification.style.display = 'none'; // Hide the element completely
+    }, { once: true });
+  }, 1000);
 });

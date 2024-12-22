@@ -4,11 +4,11 @@
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hex Code Generator</title>
+    <title>Hex-Gen</title>
   </head>
   <header>
     <nav id="nav">
-      <button id="hex-mode">
+      <button id="hex-mode" title="New Hex Code" alt="New Hex Code">
         <?xml version="1.0" encoding="UTF-8"?>
         <svg
           id="b"
@@ -27,7 +27,7 @@
         </svg>
       </button>
 
-      <button id="palette-mode">
+      <button id="palette-mode" title="New Palette" alt="New Palette">
         <?xml version="1.0" encoding="UTF-8"?>
         <svg
           id="b"
@@ -48,7 +48,7 @@
         </svg>
       </button>
 
-      <button id="copy">
+      <button id="copy" title="Copy" alt="Copy">
         <?xml version="1.0" encoding="UTF-8"?>
         <svg
           id="b"
@@ -77,6 +77,12 @@
     <div id="hex-container"></div>
 
     <div id="palette-container"></div>
+
+    <div id="copy-notification" class="fade-element">
+      <img src="public/Asset 22.svg" alt="Copied!" width="35"/>
+      <p>Copied!</p>
+
+    </div>
 
     <script src="script.js"></script>
   </body>
