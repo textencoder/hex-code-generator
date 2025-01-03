@@ -140,20 +140,20 @@ footer img {
         top: 10px;
     }
     header {  
-        height: 100vh;
+        height: 100dvh;
         width: 15vw;
         right: 20px;
         top: 0;
     }
     nav {
-        width: 100%;
+        width: 100dvh;
         height: 60%;
         flex-direction: column;
     }
 
     footer {
         width: 10vw;
-        height: 100vh;
+        height: 100dvh;
         position: fixed;
         left: 0;
         bottom: 0;
