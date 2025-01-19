@@ -122,6 +122,34 @@ footer a {
     place-items: center;
 }
 
+/*
+#hex-mode::after,
+#palette-mode::after,
+#copy::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 15px;
+    font-size: 0.75rem;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+*/
+
 @media screen and (max-width: 1000px) {
     .palette {
         font-size: 1.25rem;
