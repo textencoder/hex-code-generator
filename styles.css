@@ -18,6 +18,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-rows: 1fr 8fr;  
+    position: relative;
 }
 
 header {
@@ -83,7 +84,7 @@ main {
 #copy-notification {
     justify-content: space-evenly;
     align-items: center;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     background: whitesmoke;
