@@ -8,89 +8,120 @@
   </head>
   <body>
     <header>
-      <img src="./public/hex-gen.png" alt="hex-gen logo" width="100" />
+      <img src="./public/hex-gen_m2.png" alt="hex-gen logo" width="100" />
 
       <nav id="nav">
-        <button
-          id="hex-mode"
-          title="New Hex Code"
-          alt="New Hex Code"
-          data-label="hex mode"
-        >
-          <?xml version="1.0" encoding="UTF-8"?>
-          <svg
-            id="b"
-            xmlns="http://www.w3.org/2000/svg"
-            width="292.72"
-            height="338"
-            viewBox="0 0 292.72 338"
-          >
-            <g id="c">
-              <circle cx="146.36" cy="169" r="85.72" />
-            </g>
-          </svg>
-        </button>
 
-        <button
-          id="palette-mode"
-          title="New Palette"
-          alt="New Palette"
-          data-label="palette mode"
-        >
-          <?xml version="1.0" encoding="UTF-8"?>
-          <svg
-            id="b"
-            xmlns="http://www.w3.org/2000/svg"
-            width="292.72"
-            height="338"
-            viewBox="0 0 292.72 338"
-          >
-            <g id="c">
-              <circle cx="146.36" cy="112.23" r="43.25" />
-              <circle cx="92.18" cy="204.44" r="43.25" />
-              <circle cx="200.53" cy="204.44" r="43.25" />
-            </g>
-          </svg>
-        </button>
+        <p>Explore</p>
+        <p>Saved</p>
+        <p>About</p>
 
-        <button id="copy" title="Copy" alt="Copy" data-label="copy">
-          <?xml version="1.0" encoding="UTF-8"?>
-          <svg
-            id="b"
-            xmlns="http://www.w3.org/2000/svg"
-            width="292.72"
-            height="338"
-            viewBox="0 0 292.72 338"
-          >
-            <g id="e">
-              <polygon
-                points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
-              />
-            </g>
-          </svg>
-        </button>
       </nav>
+
+      <button id="create">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+        </svg>
+        Create
+      </button>
+
     </header>
 
     <main>
-      <div id="hex-container"></div>
+
+      <div id="hero-buttons">
+        <button
+            id="hex-mode"
+            title="New Hex Code"
+            alt="New Hex Code"
+            data-label="hex mode"
+          >
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg
+              id="b"
+              xmlns="http://www.w3.org/2000/svg"
+              width="292.72"
+              height="338"
+              viewBox="0 0 292.72 338"
+            >
+              <g id="c">
+                <circle cx="146.36" cy="169" r="85.72" />
+              </g>
+            </svg>
+          </button>
+  
+          <button
+            id="palette-mode"
+            title="New Palette"
+            alt="New Palette"
+            data-label="palette mode"
+          >
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg
+              id="b"
+              xmlns="http://www.w3.org/2000/svg"
+              width="292.72"
+              height="338"
+              viewBox="0 0 292.72 338"
+            >
+              <g id="c">
+                <circle cx="146.36" cy="112.23" r="43.25" />
+                <circle cx="92.18" cy="204.44" r="43.25" />
+                <circle cx="200.53" cy="204.44" r="43.25" />
+              </g>
+            </svg>
+          </button>
+  
+          <button id="copy" title="Copy" alt="Copy" data-label="copy">
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg
+              id="b"
+              xmlns="http://www.w3.org/2000/svg"
+              width="292.72"
+              height="338"
+              viewBox="0 0 292.72 338"
+            >
+              <g id="e">
+                <polygon
+                  points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+
+  
+
+      <div id="color-display">
+
+        <div id="hex-container"></div>
+  
+        <div id="color-labels"></div>
+  
+      </div>
+
+   
+
+      
+
+
     </main>
 
     <div id="copy-notification" class="fade-element">
       <?xml version="1.0" encoding="UTF-8"?>
-          <svg
-            id="b"
-            xmlns="http://www.w3.org/2000/svg"
-            width="292.72"
-            height="338"
-            viewBox="0 0 292.72 338"
-          >
-            <g id="e">
-              <polygon
-                points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
-              />
-            </g>
-          </svg>
+      <svg
+        id="b"
+        xmlns="http://www.w3.org/2000/svg"
+        width="292.72"
+        height="338"
+        viewBox="0 0 292.72 338"
+      >
+        <g id="e">
+          <polygon
+            points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
+          />
+        </g>
+      </svg>
       <p>Copied!</p>
     </div>
 

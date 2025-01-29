@@ -6,6 +6,9 @@ const paletteMode = document.getElementById("palette-mode");
 const copyBtn = document.getElementById("copy");
 const copyNotification = document.getElementById("copy-notification");
 
+const colorLabels = document.getElementById('color-labels');
+
+
 const characters = "ABCDEF0123456789";
 
 const randomHexCharacter = () => {
@@ -18,8 +21,9 @@ const returnHexCode = () => {
   for (let i = 0; i < 6; i++) {
     hexString += randomHexCharacter();
   }
+  hexContainer.innerHTML = '';
   hexContainer.style.backgroundColor = hexString;
-  hexContainer.innerText = hexString;
+  colorLabels.innerText = hexString;
   return hexString;
 };
 
