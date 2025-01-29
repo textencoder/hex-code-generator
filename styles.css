@@ -86,16 +86,19 @@ main {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: black;
-    color: white;
+    background: whitesmoke;
+    color: rgb(16, 23, 15);
     padding: 10px;
     border-radius: 5px;
     display: none;
     width: 120px;
     height: 30px;
-    display: none;
     opacity: 0;
     transition: opacity 1s ease-out;
+
+    svg {
+        fill: rgb(16, 23, 15); 
+    }
 }
 
 #copy-notification.visible {
