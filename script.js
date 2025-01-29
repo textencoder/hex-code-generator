@@ -1,24 +1,10 @@
 const body = document.querySelector("body");
 const hexContainer = document.getElementById("hex-container");
-const paletteContainer = document.getElementById("palette-container");
-
+//const paletteContainer = document.getElementById("palette-container");
 const hexMode = document.getElementById("hex-mode");
 const paletteMode = document.getElementById("palette-mode");
 const copyBtn = document.getElementById("copy");
-
 const copyNotification = document.getElementById("copy-notification");
-
-hexMode.addEventListener("click", () => {
-  paletteContainer.style.display = "none";
-  hexContainer.style.display = "flex";
-  returnHexCode();
-});
-
-paletteMode.addEventListener("click", () => {
-  hexContainer.style.display = "none";
-  paletteContainer.style.display = "flex";
-  returnPalette();
-});
 
 const characters = "ABCDEF0123456789";
 
@@ -42,16 +28,16 @@ const returnPalette = () => {
   for (let i = 0; i < 5; i++) {
     paletteArray.push(returnHexCode());
   }
-  paletteContainer.innerHTML = ``;
+  hexContainer.innerHTML = ``;
   paletteArray.forEach((hex) => {
-    paletteContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`;
+    hexContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`;
   });
 };
 
-//window.addEventListener("load", returnHexCode, false);
-hexContainer.addEventListener("click", returnHexCode);
-window.addEventListener("load", returnPalette, false);
-paletteContainer.addEventListener("click", returnPalette);
+window.addEventListener("load", returnHexCode, false);
+
+hexMode.addEventListener("click", returnHexCode);
+paletteMode.addEventListener("click", returnPalette);
 
 //copy to clipboard
 copyBtn.addEventListener("click", () => {
