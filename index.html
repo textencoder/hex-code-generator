@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://use.typekit.net/xrt5vnf.css" />
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,103 +9,98 @@
   </head>
   <body>
     <header>
-      <img src="./public/hex-gen_m2.png" alt="hex-gen logo" width="100" />
+      <img src="./public/logo 13025.png" alt="hex-gen logo" width="60" />
 
-      <nav id="nav">
-
-        <p>Explore</p>
-        <p>Saved</p>
-        <p>About</p>
-
-      </nav>
+      <div id="search">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#e8eaed"
+        >
+          <path
+            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+          />
+        </svg>
+        <input type="text" placeholder="Search colors" />
+      </div>
 
       <button id="create">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
         </svg>
-        Create
+        <p>Create</p>
       </button>
-
     </header>
 
     <main>
-
       <div id="hero-buttons">
         <button
-            id="hex-mode"
-            title="New Hex Code"
-            alt="New Hex Code"
-            data-label="hex mode"
+          id="hex-mode"
+          title="New Hex Code"
+          alt="New Hex Code"
+          data-label="hex mode"
+        >
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg
+            id="b"
+            xmlns="http://www.w3.org/2000/svg"
+            width="292.72"
+            height="338"
+            viewBox="0 0 292.72 338"
           >
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg
-              id="b"
-              xmlns="http://www.w3.org/2000/svg"
-              width="292.72"
-              height="338"
-              viewBox="0 0 292.72 338"
-            >
-              <g id="c">
-                <circle cx="146.36" cy="169" r="85.72" />
-              </g>
-            </svg>
-          </button>
-  
-          <button
-            id="palette-mode"
-            title="New Palette"
-            alt="New Palette"
-            data-label="palette mode"
+            <g id="c">
+              <circle cx="146.36" cy="169" r="85.72" />
+            </g>
+          </svg>
+        </button>
+
+        <button
+          id="palette-mode"
+          title="New Palette"
+          alt="New Palette"
+          data-label="palette mode"
+        >
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg
+            id="b"
+            xmlns="http://www.w3.org/2000/svg"
+            width="292.72"
+            height="338"
+            viewBox="0 0 292.72 338"
           >
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg
-              id="b"
-              xmlns="http://www.w3.org/2000/svg"
-              width="292.72"
-              height="338"
-              viewBox="0 0 292.72 338"
-            >
-              <g id="c">
-                <circle cx="146.36" cy="112.23" r="43.25" />
-                <circle cx="92.18" cy="204.44" r="43.25" />
-                <circle cx="200.53" cy="204.44" r="43.25" />
-              </g>
-            </svg>
-          </button>
-  
-          <button id="copy" title="Copy" alt="Copy" data-label="copy">
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg
-              id="b"
-              xmlns="http://www.w3.org/2000/svg"
-              width="292.72"
-              height="338"
-              viewBox="0 0 292.72 338"
-            >
-              <g id="e">
-                <polygon
-                  points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
-                />
-              </g>
-            </svg>
-          </button>
-        </div>
+            <g id="c">
+              <circle cx="146.36" cy="112.23" r="43.25" />
+              <circle cx="92.18" cy="204.44" r="43.25" />
+              <circle cx="200.53" cy="204.44" r="43.25" />
+            </g>
+          </svg>
+        </button>
 
-  
-
-      <div id="color-display">
-
-        <div id="hex-container"></div>
-  
-        <div id="color-labels"></div>
-  
+        <button id="copy" title="Copy" alt="Copy" data-label="copy">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg
+            id="b"
+            xmlns="http://www.w3.org/2000/svg"
+            width="292.72"
+            height="338"
+            viewBox="0 0 292.72 338"
+          >
+            <g id="e">
+              <polygon
+                points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
+              />
+            </g>
+          </svg>
+        </button>
       </div>
 
-   
+      <div id="color-display">
+        <div id="hex-container"></div>
 
-      
-
-
+        <div id="color-labels"></div>
+      </div>
     </main>
 
     <div id="copy-notification" class="fade-element">
