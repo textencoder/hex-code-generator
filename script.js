@@ -8,6 +8,22 @@ const copyNotification = document.getElementById("copy-notification");
 
 const colorLabels = document.getElementById('color-labels');
 
+const searchBar = document.querySelector('header input');
+const searchIcon = document.getElementById('search-icon');
+
+searchIcon.addEventListener('click', () => {
+  searchBar.focus();
+})
+
+//blur select when option is clicked
+document.querySelectorAll('select').forEach(el => {
+  el.addEventListener('change', () => {
+    setTimeout(() => {
+      el.blur();
+    }, 0);
+  })
+})
+
 
 const characters = "ABCDEF0123456789";
 
@@ -33,6 +49,7 @@ const returnPalette = () => {
     paletteArray.push(returnHexCode());
   }
   hexContainer.innerHTML = ``;
+  colorLabels.innerText = '';
   paletteArray.forEach((hex) => {
     hexContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`;
   });
@@ -40,10 +57,11 @@ const returnPalette = () => {
 
 window.addEventListener("load", returnHexCode, false);
 
-hexMode.addEventListener("click", returnHexCode);
-paletteMode.addEventListener("click", returnPalette);
+//hexMode.addEventListener("click", returnHexCode);
+//paletteMode.addEventListener("click", returnPalette);
 
 //copy to clipboard
+/*
 copyBtn.addEventListener("click", () => {
   if (hexContainer.style.display == "none") {
     navigator.clipboard.writeText(paletteContainer.innerText);
@@ -66,3 +84,4 @@ copyBtn.addEventListener("click", () => {
     }, { once: true });
   }, 1000);
 });
+*/

@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <img src="./public/logo 13025.png" alt="hex-gen logo" width="60" />
+      <img src="./public/logo 13025.png" alt="hex-gen logo" width="55" />
 
       <div id="search">
         <svg
@@ -18,6 +18,7 @@
           viewBox="0 -960 960 960"
           width="24px"
           fill="#e8eaed"
+          id="search-icon"
         >
           <path
             d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
@@ -35,8 +36,54 @@
     </header>
 
     <main>
-      <div id="hero-buttons">
-        <button
+      <div id="sort-filter">
+        <select id="sort">
+
+          <option value="">Sort</option>
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="name">Name</option>
+          <option value="stars">Stars</option>
+        </select>
+
+
+        <select id="filter">
+          <option value="">Filter</option>
+          <option value="colors">Colors</option>
+          <option value="palettes">Palettes</option>
+          <option value="all">All</option>
+        </select>
+
+      </div>
+
+      <div id="color-display">
+        <div id="hex-container"></div>
+
+        <div id="color-labels"></div>
+      </div>
+    </main>
+
+    <!-- <div id="copy-notification" class="fade-element">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg
+        id="b"
+        xmlns="http://www.w3.org/2000/svg"
+        width="292.72"
+        height="338"
+        viewBox="0 0 292.72 338"
+      >
+        <g id="e">
+          <polygon
+            points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
+          />
+        </g>
+      </svg>
+      <p>Copied!</p>
+    </div> -->
+
+    <script src="script.js"></script>
+
+    <!-- <button
           id="hex-mode"
           title="New Hex Code"
           alt="New Hex Code"
@@ -93,34 +140,6 @@
               />
             </g>
           </svg>
-        </button>
-      </div>
-
-      <div id="color-display">
-        <div id="hex-container"></div>
-
-        <div id="color-labels"></div>
-      </div>
-    </main>
-
-    <div id="copy-notification" class="fade-element">
-      <?xml version="1.0" encoding="UTF-8"?>
-      <svg
-        id="b"
-        xmlns="http://www.w3.org/2000/svg"
-        width="292.72"
-        height="338"
-        viewBox="0 0 292.72 338"
-      >
-        <g id="e">
-          <polygon
-            points="195.98 93.45 195.98 93.45 96.74 93.45 96.74 244.55 146.35 200.5 195.98 244.55 195.98 93.45"
-          />
-        </g>
-      </svg>
-      <p>Copied!</p>
-    </div>
-
-    <script src="script.js"></script>
+        </button> -->
   </body>
 </html>
