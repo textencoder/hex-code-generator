@@ -24,7 +24,6 @@ document.querySelectorAll('select').forEach(el => {
   })
 })
 
-
 const characters = "ABCDEF0123456789";
 
 const randomHexCharacter = () => {
@@ -37,9 +36,9 @@ const returnHexCode = () => {
   for (let i = 0; i < 6; i++) {
     hexString += randomHexCharacter();
   }
-  hexContainer.innerHTML = '';
-  hexContainer.style.backgroundColor = hexString;
-  colorLabels.innerText = hexString;
+  //hexContainer.innerHTML = '';
+  //hexContainer.style.backgroundColor = hexString;
+  //colorLabels.innerText = hexString;
   return hexString;
 };
 
@@ -55,7 +54,19 @@ const returnPalette = () => {
   });
 };
 
-window.addEventListener("load", returnHexCode, false);
+//window.addEventListener("load", returnHexCode, false);
+
+const cardsContainer = document.getElementById('cards-container');
+
+for (let i=0; i<24; i++) {
+  cardsContainer.innerHTML += `<div class="card">
+  <div class="color" style="background-color: ${returnHexCode()}"></div>
+  <div class="color-info">
+  <p>Color Name</p>
+  <p>%</p>
+  </div>
+  </div>`
+}
 
 //hexMode.addEventListener("click", returnHexCode);
 //paletteMode.addEventListener("click", returnPalette);

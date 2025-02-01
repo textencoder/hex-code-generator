@@ -15,14 +15,14 @@ html {
   display: flex;
   justify-content: center;
   background: linear-gradient(130deg, #fffafa, #f8f8ff);
+  overflow-x: hidden;
 }
 
 body {
   width: 60%;
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 8fr;
-  position: relative;
+  grid-template-rows: 100px;
 }
 
 header {
@@ -102,7 +102,7 @@ img {
 main {
   display: grid;
   place-items: center;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 100px;
 }
 
 #sort-filter {
@@ -111,7 +111,6 @@ main {
   justify-content: end;
   align-items: center;
   gap: 20px;
-  padding: 20px;
 
   select {
     width: 110px;
@@ -148,6 +147,43 @@ main {
   }
 }
 
+#cards-container {
+  
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 35px 20px;
+
+}
+
+.card {
+  border: 1px solid black;
+  width: 200px;
+  aspect-ratio: 5/6;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  place-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.color {
+  border: 1px solid black;
+  width: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+
+.color-info {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 
 #color-display {
   border: 1px solid black;
   border-radius: 5px;
@@ -174,7 +210,7 @@ main {
   border-radius: 5px;
   display: grid;
   place-items: center;
-}
+} */
 
 /* #copy-notification {
     justify-content: space-evenly;
@@ -205,7 +241,7 @@ main {
     opacity: 0;
   } */
 
-.palette {
+/* .palette {
   width: 20%;
   height: 100%;
   display: grid;
@@ -218,6 +254,18 @@ main {
 
 .invisible {
   visibility: hidden;
+} */
+
+@media screen and (max-width: 1456px) {
+  #cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .card {
+    width: 160px;
+  }
 }
 
 @media screen and (max-width: 860px) {
@@ -235,19 +283,19 @@ main {
     }
   }
 
-  #color-display {
+  /* #color-display {
     width: 80%;
     height: 60%;
-  }
+  } */
 
-  .palette {
+  /* .palette {
     width: 100%;
   }
 
   #hex-container {
     display: flex;
     flex-direction: column;
-  }
+  } */
 }
 
 @media screen and (max-width: 480px) {
@@ -261,5 +309,13 @@ main {
 
   #sort-filter {
     justify-content: center;
+  }
+
+  #cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 150px;
   }
 }
