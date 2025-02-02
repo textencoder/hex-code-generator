@@ -16,13 +16,14 @@ html {
   display: flex;
   justify-content: center;
   background: linear-gradient(130deg, #fffafa, #f8f8ff);
+  scroll-behavior: smooth;
 }
 
 body {
   width: 60%;
   height: 100%;
   display: grid;
-  grid-template-rows: 100px;
+  grid-template-rows: 100px 8fr 100px;
 }
 
 header {
@@ -157,7 +158,7 @@ main {
 }
 
 .card {
-  border: 1px solid black;
+  border: 1px solid rgb(150, 150, 150);
   width: 100%;
   aspect-ratio: 5/6;
   display: grid;
@@ -165,7 +166,7 @@ main {
   place-items: center;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .color {
@@ -182,6 +183,28 @@ main {
   align-items: start;
   font-size: 1rem;
   height: 100%;
+
+  svg {
+    width: 1.25em;
+    fill : rgb(215, 220, 215);
+  }
+}
+
+.name-hex {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+}
+
+.hex-label {
+  font-size: 0.75rem;
+  color: rgb(150, 150, 150);
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  color: rgb(150, 150, 150);
 }
 
 /* 
