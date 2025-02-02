@@ -24,6 +24,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-rows: 100px 8fr 100px;
+  
 }
 
 header {
@@ -104,10 +105,12 @@ main {
   display: grid;
   place-items: center;
   grid-template-rows: 90px;
+  width: 95%;
+  justify-self: center;
 }
 
 #sort-filter {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -131,7 +134,7 @@ main {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url("./public/keyboard_arrow_down_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg");
+    background-image: url("/public/keyboard_arrow_down_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg");
     background-repeat: no-repeat;
     background-position: right 10px center;
   }
@@ -152,7 +155,7 @@ main {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 225px);
+  grid-template-columns: repeat(auto-fit, 215px);
   justify-content: center;
   gap: 20px 30px;
 }
@@ -188,6 +191,10 @@ main {
     width: 1.25em;
     fill: rgb(215, 220, 215);
   }
+
+  svg:hover {
+    fill: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .name-hex {
@@ -206,79 +213,6 @@ footer {
   place-items: center;
   color: rgb(150, 150, 150);
 }
-
-/* 
-#color-display {
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 400px;
-  height: 500px;
-  display: grid;
-  grid-template-rows: 4fr 1fr;
-  padding: 25px;
-  gap: 10px;
-}
-
-#hex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  cursor: default;
-  width: 100%;
-  border-radius: 5px;
-}
-
-#color-labels {
-  border: 1px solid black;
-  border-radius: 5px;
-  display: grid;
-  place-items: center;
-} */
-
-/* #copy-notification {
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: whitesmoke;
-    color: rgb(16, 23, 15);
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-    width: 120px;
-    height: 30px;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-
-    svg {
-        fill: rgb(16, 23, 15); 
-    }
-}
-
-#copy-notification.visible {
-    opacity: 1;
-  }
-
-#copy-notification.fade-out {
-    opacity: 0;
-  } */
-
-/* .palette {
-  width: 20%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
-} */
 
 @media screen and (min-width: 1201px) and (max-width: 1600px) {
   body {
@@ -306,7 +240,7 @@ footer {
   }
 
   #cards-container {
-    grid-template-columns: repeat(auto-fit, 285px);
+    grid-template-columns: repeat(auto-fit, 265px);
   }
 }
 
