@@ -9,12 +9,14 @@
   </head>
   <body>
     <header>
+    <a href="/">
       <img
         src="/logo_13025.png"
         alt="hex-gen logo"
         width="55"
         title="Hex-Gen"
       />
+    </a>
 
       <div id="search">
         <svg
@@ -29,36 +31,21 @@
             d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
           />
         </svg>
-        <input type="text" placeholder="Search colors" />
+        <input name="search" type="text" placeholder="Search colors" />
       </div>
 
-      <button id="create" title="Create">
+      <a href="/create">
+        <button id="create" title="Create">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
         </svg>
         <p>Create</p>
-      </button>
+        </button>
+      </a>
     </header>
 
-    <main>
-      <div id="sort-filter">
-        <select id="sort" title="Sort">
-          <option value="">Sort</option>
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="name">Name</option>
-          <option value="stars">Stars</option>
-        </select>
-
-        <select id="filter" title="Filter">
-          <option value="">Filter</option>
-          <option value="colors">Colors</option>
-          <option value="palettes">Palettes</option>
-          <option value="all">All</option>
-        </select>
-      </div>
-
-      <section id="cards-container"></section>
+    <main id="app">
+      
     </main>
 
     <footer>&copy; 2025 Hex-Gen</footer>
