@@ -6,23 +6,23 @@ const paletteMode = document.getElementById("palette-mode");
 const copyBtn = document.getElementById("copy");
 const copyNotification = document.getElementById("copy-notification");
 
-const colorLabels = document.getElementById('color-labels');
+const colorLabels = document.getElementById("color-labels");
 
-const searchBar = document.querySelector('header input');
-const searchIcon = document.getElementById('search-icon');
+const searchBar = document.querySelector("header input");
+const searchIcon = document.getElementById("search-icon");
 
-searchIcon.addEventListener('click', () => {
+searchIcon.addEventListener("click", () => {
   searchBar.focus();
-})
+});
 
 //blur select when option is clicked
-document.querySelectorAll('select').forEach(el => {
-  el.addEventListener('change', () => {
+document.querySelectorAll("select").forEach((el) => {
+  el.addEventListener("change", () => {
     setTimeout(() => {
       el.blur();
     }, 0);
-  })
-})
+  });
+});
 
 const characters = "ABCDEF0123456789";
 
@@ -48,7 +48,7 @@ const returnPalette = () => {
     paletteArray.push(returnHexCode());
   }
   hexContainer.innerHTML = ``;
-  colorLabels.innerText = '';
+  colorLabels.innerText = "";
   paletteArray.forEach((hex) => {
     hexContainer.innerHTML += `<div class="palette" style="background: ${hex}">${hex}</div>`;
   });
@@ -56,9 +56,9 @@ const returnPalette = () => {
 
 //window.addEventListener("load", returnHexCode, false);
 
-const cardsContainer = document.getElementById('cards-container');
+const cardsContainer = document.getElementById("cards-container");
 
-for (let i=0; i<24; i++) {
+for (let i = 0; i < 24; i++) {
   let bgColor = returnHexCode();
   cardsContainer.innerHTML += `<div class="card">
   <div class="color" style="background-color: ${bgColor}"></div>
@@ -69,7 +69,7 @@ for (let i=0; i<24; i++) {
   </div>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/></svg>
   </div>
-  </div>`
+  </div>`;
 }
 
 //hexMode.addEventListener("click", returnHexCode);
