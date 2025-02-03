@@ -4,5 +4,5 @@ export default defineConfig({
   server: {
     historyApiFallback: true,
   },
-  base: '/hex-code-generator'
+  base: '/'
 });
